@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calorie Measure — Estimá las calorías de tu comida</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Calorie Measure</h1>
+    <p class="subtitulo">Subí una foto de tu comida y estimamos las calorías con IA</p>
+
+    <div id="dropzone" class="dropzone">
+      <input type="file" id="inputImagen" accept="image/jpeg,image/png,image/webp" hidden>
+      <img id="preview" alt="" hidden>
+      <p id="dropzoneTexto">Arrastrá una imagen acá o hacé clic para elegir</p>
+    </div>
+
+    <button id="btnAnalizar" disabled>Analizar</button>
+
+    <p id="estado" class="estado"></p>
+
+    <section id="resultado" hidden>
+      <h2 id="plato"></h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Ingrediente</th>
+            <th>Porción (g)</th>
+            <th>Calorías</th>
+          </tr>
+        </thead>
+        <tbody id="ingredientes"></tbody>
+      </table>
+
+      <div class="totales">
+        <div class="total-kcal">
+          <span id="caloriasTotales">0</span>
+          <small>kcal totales</small>
+        </div>
+        <div class="macros">
+          <div class="macro">
+            <label>Proteínas <span id="proteinas">0 g</span></label>
+            <div class="barra"><div id="barraProteinas"></div></div>
+          </div>
+          <div class="macro">
+            <label>Carbohidratos <span id="carbohidratos">0 g</span></label>
+            <div class="barra"><div id="barraCarbohidratos"></div></div>
+          </div>
+          <div class="macro">
+            <label>Grasas <span id="grasas">0 g</span></label>
+            <div class="barra"><div id="barraGrasas"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

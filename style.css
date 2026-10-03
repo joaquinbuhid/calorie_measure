@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 560px;
+}
+
+h1 {
+  font-size: 1.6rem;
+}
+
+.subtitulo {
+  color: #94a3b8;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.dropzone {
+  border: 2px dashed #475569;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  color: #94a3b8;
+}
+
+.dropzone:hover,
+.dropzone.dragover {
+  border-color: #38bdf8;
+  background: #1e293b;
+}
+
+.dropzone img {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+
+button {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0f172a;
+  background: #38bdf8;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: #475569;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.estado {
+  margin-top: 1rem;
+  min-height: 1.4rem;
+  color: #94a3b8;
+  text-align: center;
+}
+
+.estado.error {
+  color: #f87171;
+}
+
+#resultado {
+  margin-top: 1.5rem;
+}
+
+#resultado h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th, td {
+  padding: 0.6rem 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid #334155;
+}
+
+th {
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+td:last-child,
+th:last-child {
+  text-align: right;
+}
+
+.totales {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  align-items: center;
+}
+
+.total-kcal {
+  text-align: center;
+}
+
+.total-kcal span {
+  display: block;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+.total-kcal small {
+  color: #94a3b8;
+}
+
+.macros {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.macro label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-bottom: 0.25rem;
+}
+
+.barra {
+  height: 8px;
+  background: #1e293b;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.barra div {
+  height: 100%;
+  width: 0;
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+#barraProteinas { background: #34d399; }
+#barraCarbohidratos { background: #fbbf24; }
+#barraGrasas { background: #f87171; }
